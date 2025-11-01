@@ -3,14 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Card Interface</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Finance Encyclopedia - Flashcards</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- GitHub Repo Link -->
+    <a href="https://github.com/kutt27/finance-encyclopedia" target="_blank" class="github-link" aria-label="View on GitHub">
+        <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+    </a>
 
-    <h1>Devpedia Simple Cards</h1>
-    <div id="card-container">
+    <div class="container">
+        <header>
+            <h1>Finance Encyclopedia</h1>
+            <p class="subtitle">Learn finance concepts through interactive flashcards</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by title or keyword..." />
+            <button id="clear-search" class="clear-btn" aria-label="Clear search">×</button>
         </div>
+
+        <!-- Flashcard Selector -->
+        <div class="flashcard-selector">
+            <label for="card-count">Number of flashcards:</label>
+            <input type="number" id="card-count" min="1" max="50" value="4" />
+            <button id="generate-cards" class="primary-btn">Generate Flashcards</button>
+            <button id="show-all-cards" class="secondary-btn">Show All Cards</button>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div id="card-container"></div>
+    </div>
 
     <div id="cardModal" class="modal">
         <div class="modal-content">
@@ -27,51 +73,149 @@
             const closeButton = document.querySelector('.close-button');
             const modalTitle = document.getElementById('modal-title');
             const modalExplanation = document.getElementById('modal-explanation');
+            const cardCountInput = document.getElementById('card-count');
+            const generateBtn = document.getElementById('generate-cards');
+            const showAllBtn = document.getElementById('show-all-cards');
+            const searchInput = document.getElementById('search-input');
+            const clearSearchBtn = document.getElementById('clear-search');
+            const themeToggleBtn = document.getElementById('theme-toggle');
 
-            // Function to fetch data and create cards
-            async function loadCards() {
+            let allCardsData = [];
+            let currentDisplayedCards = [];
+            let searchActive = false;
+
+            // Function to fetch data
+            async function fetchCards() {
                 try {
-                    // Fetch the JSON data from the file
-                    const response = await fetch('cards.json'); 
+                    const response = await fetch('cards.json');
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
-                    const cardsData = await response.json();
-
-                    // Loop through the data and create an HTML card for each item
-                    cardsData.forEach(cardInfo => {
-                        const cardDiv = document.createElement('div');
-                        cardDiv.classList.add('card');
-                        
-                        cardDiv.innerHTML = `
-                            <h2>${cardInfo.title}</h2>
-                            <p class="topic">Topic: ${cardInfo.topic}</p>
-                            <button data-explanation="${cardInfo.explanation}" 
-                                    data-title="${cardInfo.title}">
-                                ${cardInfo.buttonText}
-                            </button>
-                        `;
-
-                        // Add event listener to the button
-                        const button = cardDiv.querySelector('button');
-                        button.addEventListener('click', (event) => {
-                            const explanation = event.target.getAttribute('data-explanation');
-                            const title = event.target.getAttribute('data-title');
-                            
-                            // Populate the modal with content and show it
-                            modalTitle.textContent = title;
-                            modalExplanation.textContent = explanation;
-                            modal.style.display = "block";
-                        });
-
-                        container.appendChild(cardDiv);
-                    });
-
+                    allCardsData = await response.json();
+                    return allCardsData;
                 } catch (error) {
                     console.error('Could not load card data:', error);
-                    container.innerHTML = '<p>Error loading content.</p>';
+                    container.innerHTML = '<p class="error-message">Error loading content. Please refresh the page.</p>';
+                    return [];
                 }
             }
+
+            // Function to get random cards
+            function getRandomCards(cards, count) {
+                const shuffled = [...cards].sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, Math.min(count, cards.length));
+            }
+
+            // Function to search cards
+            function searchCards(query) {
+                if (!query.trim()) {
+                    return allCardsData;
+                }
+
+                const searchTerm = query.toLowerCase();
+                return allCardsData.filter(card => {
+                    const titleMatch = card.title.toLowerCase().includes(searchTerm);
+                    const explanationMatch = card.explanation.toLowerCase().includes(searchTerm);
+                    const topicMatch = card.topic.toLowerCase().includes(searchTerm);
+                    return titleMatch || explanationMatch || topicMatch;
+                });
+            }
+
+            // Function to display cards
+            function displayCards(cardsToDisplay, isSearchResult = false) {
+                container.innerHTML = '';
+                currentDisplayedCards = cardsToDisplay;
+
+                if (cardsToDisplay.length === 0) {
+                    const message = isSearchResult
+                        ? 'No cards found matching your search.'
+                        : 'No cards available.';
+                    container.innerHTML = `<p class="info-message">${message}</p>`;
+                    return;
+                }
+
+                cardsToDisplay.forEach(cardInfo => {
+                    const cardDiv = document.createElement('div');
+                    cardDiv.classList.add('card');
+
+                    cardDiv.innerHTML = `
+                        <div class="card-header">
+                            <h2>${cardInfo.title}</h2>
+                            <span class="topic-badge">${cardInfo.topic}</span>
+                        </div>
+                        <button class="card-btn" data-explanation="${cardInfo.explanation}"
+                                data-title="${cardInfo.title}">
+                            ${cardInfo.buttonText}
+                        </button>
+                    `;
+
+                    const button = cardDiv.querySelector('button');
+                    button.addEventListener('click', (event) => {
+                        const explanation = event.target.getAttribute('data-explanation');
+                        const title = event.target.getAttribute('data-title');
+
+                        modalTitle.textContent = title;
+                        modalExplanation.textContent = explanation;
+                        modal.style.display = "block";
+                    });
+
+                    container.appendChild(cardDiv);
+                });
+            }
+
+            // Search functionality
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value;
+                searchActive = query.trim().length > 0;
+
+                if (searchActive) {
+                    clearSearchBtn.style.display = 'block';
+                    const results = searchCards(query);
+                    displayCards(results, true);
+                } else {
+                    clearSearchBtn.style.display = 'none';
+                    displayCards(allCardsData);
+                }
+            });
+
+            // Clear search
+            clearSearchBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                searchActive = false;
+                clearSearchBtn.style.display = 'none';
+                displayCards(allCardsData);
+                searchInput.focus();
+            });
+
+            // Generate random flashcards
+            generateBtn.addEventListener('click', () => {
+                if (searchActive) {
+                    const count = parseInt(cardCountInput.value) || 4;
+                    const randomCards = getRandomCards(currentDisplayedCards, count);
+                    displayCards(randomCards);
+                } else {
+                    const count = parseInt(cardCountInput.value) || 4;
+                    const randomCards = getRandomCards(allCardsData, count);
+                    displayCards(randomCards);
+                }
+            });
+
+            // Show all cards
+            showAllBtn.addEventListener('click', () => {
+                if (searchActive) {
+                    const results = searchCards(searchInput.value);
+                    displayCards(results, true);
+                } else {
+                    displayCards(allCardsData);
+                }
+            });
+
+            // Theme toggle
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                const isDark = document.body.classList.contains('dark-theme');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
 
             // Close modal when the 'x' is clicked
             closeButton.addEventListener('click', () => {
@@ -85,8 +229,23 @@
                 }
             });
 
-            // Start the application
-            loadCards();
+            // Initialize the application
+            async function init() {
+                await fetchCards();
+                // Update max value for input
+                cardCountInput.max = allCardsData.length;
+
+                // Load saved theme preference
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                }
+
+                // Display initial cards
+                displayCards(allCardsData);
+            }
+
+            init();
         });
     </script>
 
