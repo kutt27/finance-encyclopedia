@@ -1,0 +1,26 @@
+[
+  {
+    "title": "HTML",
+    "topic": "Frontend",
+    "buttonText": "What is HTML?",
+    "explanation": "HyperText Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript."
+  },
+  {
+    "title": "CSS",
+    "topic": "Frontend",
+    "buttonText": "What is CSS?",
+    "explanation": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
+  },
+  {
+    "title": "JavaScript",
+    "topic": "Frontend",
+    "buttonText": "What is JS?",
+    "explanation": "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it."
+  },
+  {
+    "title": "Node.js",
+    "topic": "Backend",
+    "buttonText": "What is Node.js?",
+    "explanation": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. It's used for building scalable network applications."
+  }
+]

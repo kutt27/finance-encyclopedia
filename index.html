@@ -156,7 +156,7 @@
                         const title = event.target.getAttribute('data-title');
 
                         modalTitle.textContent = title;
-                        modalExplanation.textContent = explanation;
+                        modalExplanation.innerHTML = explanation;
                         modal.style.display = "block";
                     });
 

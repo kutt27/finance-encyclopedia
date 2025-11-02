@@ -1,26 +1,38 @@
 [
   {
-    "title": "HTML",
-    "topic": "Frontend",
-    "buttonText": "What is HTML?",
-    "explanation": "HyperText Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript."
+  "title": "Time Value of Money (TVM)",
+  "topic": "Finance",
+  "buttonText": "What is Time Value of Money (TVM)?",
+  "explanation": "<p>The <strong>Time Value of Money (TVM)</strong> is a core financial principle stating that a sum of money is worth more today than the same amount in the future due to its potential earning capacity through investment or interest.</p>"
   },
   {
-    "title": "CSS",
-    "topic": "Frontend",
-    "buttonText": "What is CSS?",
-    "explanation": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
+    "title": "Future Value (FV)",
+    "topic": "Finance",
+    "buttonText": "What is Future Value (FV)?",
+    "explanation": "Future Value (FV) is the value of a current asset at a specified date in the future based on an assumed rate of growth or interest."
   },
   {
-    "title": "JavaScript",
-    "topic": "Frontend",
-    "buttonText": "What is JS?",
-    "explanation": "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it."
+    "title": "Present Value (PV)",
+    "topic": "Finance",
+    "buttonText": "What is Present Value (PV)?",
+    "explanation": "Present Value (PV) is the current worth of a future sum of money or stream of cash flows given a specified rate of return or discount rate."
   },
   {
-    "title": "Node.js",
-    "topic": "Backend",
-    "buttonText": "What is Node.js?",
-    "explanation": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. It's used for building scalable network applications."
+    "title": "Net Present Value (NPV)",
+    "topic": "Finance",
+    "buttonText": "What is Net Present Value (NPV)?",
+    "explanation": "Net Present Value (NPV) is the sum of the present values of incoming and outgoing cash flows over a period of time. It measures the profitability of an investment by discounting future cash flows to the present."
+  },
+  {
+    "title": "Internal Rate of Return (IRR)",
+    "topic": "Finance",
+    "buttonText": "What is Internal Rate of Return (IRR)?",
+    "explanation": "Internal Rate of Return (IRR) is the discount rate at which the net present value (NPV) of all cash flows from a particular investment equals zero. It represents the expected rate of return."
+  },
+  {
+    "title": "Modified Internal Rate of Return (MIRR)",
+    "topic": "Finance",
+    "buttonText": "What is Modified Internal Rate of Return (MIRR)?",
+    "explanation": "Modified Internal Rate of Return (MIRR) adjusts the IRR by assuming reinvestment of cash flows at the project's cost of capital rather than the IRR, providing a more realistic measure of return."
   }
 ]
