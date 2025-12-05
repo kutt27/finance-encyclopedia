@@ -336,6 +336,44 @@ header h1 {
     font-size: var(--font-size-lg);
     line-height: 1.8;
     font-weight: 400;
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-content ul,
+.modal-content ol {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+}
+
+.modal-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.modal-content strong {
+    font-weight: 600;
+}
+
+.modal-content em {
+    font-style: italic;
+}
+
+/* MathJax equation styling */
+.modal-content mjx-container {
+    margin: var(--spacing-md) 0;
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.modal-content mjx-container[display="true"] {
+    text-align: center;
+}
+
+/* Ensure LaTeX delimiters work */
+.modal-content .MathJax {
+    display: inline-block;
 }
 
 .close-button {
