@@ -1840,5 +1840,11 @@
     "topic": "Taxation",
     "buttonText": "What are Tax Compliance Issues?",
     "explanation": "<p><strong>Compliance Issues Related to Taxation</strong> Issues related to adhering to tax laws and regulations, including accurate reporting, timely payments, and avoiding penalties.</p><p><strong>Important Details:</strong> Important for tax planning, compliance, and understanding fiscal policy implications.</p>"
+  },
+  {
+    "title": "Net Asset Value",
+    "topic": "Corporate Finance",
+    "buttonText": "What is Net Asset Value?",
+    "explanation": "<p><strong>Net Asset Value (NAV) Explanation</strong> The net asset value of an investment or fund can be impacted by compliance issues related to taxation, including accurate reporting, timely payments, and avoiding penalties that affect the overall NAV.</p> <p><strong>Important Details:</strong> Important for NAV calculation, tax planning, and understanding fiscal policy implications that directly influence the net asset value of an investment or fund.</p>"
   }
 ]
