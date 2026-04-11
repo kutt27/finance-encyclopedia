@@ -1,6 +1,8 @@
 # Finance Encyclopedia
 ---
 
+Change of approach. Each card will contain important note and methods of calculation if necessary.
+
 ## I. Foundational Finance Theory and Corporate Issuers
 
 ### Time Value of Money (TVM) and Capital Budgeting

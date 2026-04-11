@@ -1,178 +1,28 @@
 [
   {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "What is Time Value of Money (TVM)?",
-      "explanation": "<p>The <strong>Time Value of Money (TVM)</strong> is a fundamental finance concept stating that money available today is worth more than the same amount in the future due to its potential earning capacity through interest or investment returns. This principle underpins the valuation of all financial instruments.</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "What is the basic rationale behind TVM?",
-      "explanation": "<p>The basic rationale is that money can earn interest, so any amount of money is worth more the sooner it is received.</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "What is the general TVM equation?",
-      "explanation": "<p>The general TVM formula is <em>$$FV = PV \\times (1 + r)^n$$</em>.</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "In the TVM formula, what does FV stand for?",
-      "explanation": "<p><em>FV</em> = Future Value</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "In the TVM formula, what does PV stand for?",
-      "explanation": "<p><em>PV</em> = Present Value</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "In the TVM formula, what do r and n represent?",
-      "explanation": "<p><em>r</em> = interest rate per period; <em>n</em> = number of periods</p>"
-    },
-    {
-      "title": "Time Value of Money (TVM)",
-      "topic": "Finance",
-      "buttonText": "What is the key use of the TVM formula?",
-      "explanation": "<p>This formula is key for discounting and compounding cash flows in finance.</p>"
-    },
-    {
+    "title": "Time Value of Money (TVM)",
+    "topic": "Finance",
+    "buttonText": "What is Time Value of Money (TVM)?",
+    "explanation": "<p>The <strong>Time Value of Money (TVM)</strong> is a fundamental finance concept stating that money available today is worth more than the same amount in the future due to its potential earning capacity through interest or investment returns. This principle underpins the valuation of all financial instruments.</p><p>The basic rationale is that money can earn interest, so any amount of money is worth more the sooner it is received.</p><p>The general TVM formula is <em>$$FV = PV \\times (1 + r)^n$$</em>, where <em>FV</em> denotes <strong>Future Value</strong>, <em>PV</em> denotes <strong>Present Value</strong>, <em>r</em> is the interest rate per period, and <em>n</em> is the number of periods.</p><p>This formula is key for discounting and compounding cash flows in finance.</p>"
+  },
+  {
     "title": "Future Value (FV)",
     "topic": "Finance",
     "buttonText": "What is Future Value (FV)?",
-    "explanation": "<p><strong>Future Value (FV)</strong> represents the amount an investment made today will grow to by a specified date in the future, based on an assumed rate of return or interest rate.</p>"
-    },
-    {
-    "title": "Future Value (FV)",
+    "explanation": "<p><strong>Future Value (FV)</strong> represents the amount an investment made today will grow to by a specified date in the future, based on an assumed rate of return or interest rate. This measure reflects the compounded value of money after earning interest over multiple periods.</p><p>The standard equation is <em>$$FV = PV \\times (1 + r)^n$$</em>, where <em>PV</em> is the <strong>Present Value</strong> or initial amount, <em>r</em> is the interest rate per period, and <em>n</em> is the number of compounding periods.</p><p>Different compounding intervals—such as annual, monthly, or daily—affect the final result, with more frequent compounding generally producing a higher future value for the same nominal rate and time horizon.</p>"
+  },
+  {
+    "title": "Present Value (PV)",
     "topic": "Finance",
-    "buttonText": "What does FV reflect?",
-    "explanation": "<p>Future value reflects the compounded value of money after earning interest over periods.</p>"
-    },
-    {
-    "title": "Future Value (FV)",
+    "buttonText": "What is Present Value (PV)?",
+    "explanation": "<p><strong>Present Value (PV)</strong> measures the current worth of a future sum of money or stream of cash flows discounted at a specific rate that reflects the risk and time value of money. This helps investors evaluate how much future cash flows are worth in today's terms.</p><p>The standard equation is <em>$$PV = FV / (1 + r)^n$$</em>, where <em>FV</em> is the <strong>Future Value</strong>, <em>r</em> is the discount rate per period, and <em>n</em> is the number of periods.</p><p>PV is widely used in bond pricing, loan valuation, and capital budgeting to determine the value of future payments in current dollars.</p>"
+  },
+  {
+    "title": "Net Present Value (NPV)",
     "topic": "Finance",
-    "buttonText": "What is the equation for Future Value?",
-    "explanation": "<p><strong>Equation:</strong> $$FV = PV × (1 + r)^n$$</p>"
-    },
-    {
-    "title": "Future Value (FV)",
-    "topic": "Finance",
-    "buttonText": "In the FV formula, what does PV stand for?",
-    "explanation": "<p><em>PV</em> = Present Value or initial amount</p>"
-    },
-    {
-    "title": "Future Value (FV)",
-    "topic": "Finance",
-    "buttonText": "In the FV formula, what does r stand for?",
-    "explanation": "<p><em>r</em> = interest rate per period</p>"
-    },
-    {
-    "title": "Future Value (FV)",
-    "topic": "Finance",
-    "buttonText": "In the FV formula, what does n stand for?",
-    "explanation": "<p><em>n</em> = number of compounding periods</p>"
-    },
-    {
-    "title": "Future Value (FV)",
-    "topic": "Finance",
-    "buttonText": "How do compounding intervals affect FV calculations?",
-    "explanation": "<p>Different compounding intervals (annual, monthly, daily) affect calculation results.</p>"
-    },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "What is Present Value (PV)?",
-        "explanation": "<p><strong>Present Value (PV)</strong> measures the current worth of a future sum of money or stream of cash flows discounted at a specific rate that reflects the risk and time value of money.</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "What does PV help investors evaluate?",
-        "explanation": "<p>This helps investors evaluate how much future cash flows are worth in today's terms.</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "What is the equation for Present Value?",
-        "explanation": "<p><strong>Equation:</strong> $$PV = FV / (1 + r)^n$$</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "In the PV formula, what does FV stand for?",
-        "explanation": "<p><em>FV</em> = Future Value</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "In the PV formula, what does r stand for?",
-        "explanation": "<p><em>r</em> = discount rate per period</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "In the PV formula, what does n stand for?",
-        "explanation": "<p><em>n</em> = number of periods</p>"
-      },
-      {
-        "title": "Present Value (PV)",
-        "topic": "Finance",
-        "buttonText": "What are common uses of PV?",
-        "explanation": "<p>PV is widely used in bond pricing, loan valuation, and capital budgeting.</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "What is Net Present Value (NPV)?",
-        "explanation": "<p><strong>Net Present Value (NPV)</strong> calculates the sum of the present values of all expected cash inflows and outflows over the life of an investment or project.</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "What does NPV represent?",
-        "explanation": "<p>It represents the net benefit or cost in today's terms and serves as a key decision metric for investments.</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "What is the equation for NPV?",
-        "explanation": "<p><strong>Equation:</strong> <br> NPV = ∑ (Ct / (1 + r)^t) - C0</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "In the NPV formula, what does Ct stand for?",
-        "explanation": "<p><em>Ct</em> = net cash inflow/outflow at time t</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "In the NPV formula, what does r stand for?",
-        "explanation": "<p><em>r</em> = discount rate</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "In the NPV formula, what does t stand for?",
-        "explanation": "<p><em>t</em> = time period</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "In the NPV formula, what does C0 stand for?",
-        "explanation": "<p><em>C0</em> = initial investment cost</p>"
-      },
-      {
-        "title": "Net Present Value (NPV)",
-        "topic": "Finance",
-        "buttonText": "What does a positive NPV indicate?",
-        "explanation": "<p>A positive NPV indicates a profitable investment.</p>"
-      },
+    "buttonText": "What is Net Present Value (NPV)?",
+    "explanation": "<p><strong>Net Present Value (NPV)</strong> calculates the sum of the present values of all expected cash inflows and outflows over the life of an investment or project. It represents the net benefit or cost in today's terms and serves as a key decision metric for investments.</p><p>The standard equation is <em>$$NPV = \\sum \\left( \\frac{C_t}{(1 + r)^t} \\right) - C_0$$</em>, where <em>C_t</em> denotes the net cash inflow or outflow at time <em>t</em>, <em>r</em> is the discount rate, <em>t</em> is the time period, and <em>C_0</em> is the initial investment cost.</p><p>A positive NPV indicates a profitable investment, suggesting that the project is expected to generate more value than its cost when discounted back to the present.</p>"
+  },
   {
     "title": "Internal Rate of Return (IRR)",
     "topic": "Finance",
