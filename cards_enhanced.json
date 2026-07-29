@@ -21,7 +21,7 @@
     "title": "Net Present Value (NPV)",
     "topic": "Finance",
     "buttonText": "What is Net Present Value (NPV)?",
-    "explanation": "<p><strong>Net Present Value (NPV)</strong> calculates the sum of the present values of all expected cash inflows and outflows over the life of an investment or project. It represents the net benefit or cost in today's terms and serves as a key decision metric for investments.</p><p>The standard equation is <em>$$NPV = \\sum \\left( \\frac{C_t}{(1 + r)^t} \\right) - C_0$$</em>, where <em>C_t</em> denotes the net cash inflow or outflow at time <em>t</em>, <em>r</em> is the discount rate, <em>t</em> is the time period, and <em>C_0</em> is the initial investment cost.</p><p>A positive NPV indicates a profitable investment, suggesting that the project is expected to generate more value than its cost when discounted back to the present.</p>"
+    "explanation": "<p><strong>Net Present Value (NPV)</strong> calculates the sum of the present values of all expected cash inflows and outflows over the life of an investment or project. It represents the net benefit or cost in today's terms and serves as a key decision metric for investments.</p><p>The standard equation is <em>$$NPV = \\sum \\left( \\frac{C_t}{(1 + r)^t} \\right) - C_0$$</em>, where <em>$$C_t$$</em> denotes the net cash inflow or outflow at time <em>>$$t$$</em>, <em>$$r$$</em> is the discount rate, <em>$$t$$</em> is the time period, and <em>$$C_0$$</em> is the initial investment cost.</p><p>A positive NPV indicates a profitable investment, suggesting that the project is expected to generate more value than its cost when discounted back to the present.</p>"
   },
   {
     "title": "Internal Rate of Return (IRR)",
